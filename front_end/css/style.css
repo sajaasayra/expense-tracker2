@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+    --burgundy-primary: #6b1d2f;
+    --burgundy-hover: #521523;
+    --burgundy-light: #fbf2f4;
+    --pink-soft: #fce7f0;
+    --pink-accent: #e0a3b7;
+    --bg-color: #fdf8f9;
+    --card-bg: #ffffff;
+    --text-main: #3a2228;
+    --text-muted: #8c6f77;
+    --border-color: #f3dbe3;
+}
+
+/* Dark Mode Variables */
+body.dark-mode {
+    --bg-color: #1a0f12;
+    --card-bg: #27161a;
+    --text-main: #dbb9c8;
+    --text-muted: #c9a8b2;
+    --border-color: #3d2027;
+    --burgundy-light: #3d1b24;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Navbar */
+.custom-navbar {
+    background: linear-gradient(135deg, #6b1d2f 0%, #8b263e 100%);
+    padding: 1.1rem 0;
+    box-shadow: 0 4px 15px rgba(107, 29, 47, 0.15);
+}
+
+.brand-title {
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: -0.01em;
+    color: #ffffff;
+}
+
+/* Summary Cards */
+.summary-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    padding: 1.3rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    transition: all 0.25s ease;
+}
+
+.summary-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.4rem;
+}
+
+.card-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--pink-accent);
+    margin: 0;
+}
+
+/* Table Styling */
+.custom-table-container {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    padding: 1.2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    transition: background-color 0.3s ease;
+}
+
+.table {
+    margin-bottom: 0;
+    color: var(--text-main);
+    --bs-table-bg: transparent; /* إلغاء خلفية Bootstrap الافتراضية للجدول */
+    --bs-table-color: var(--text-main);
+}
+
+.table thead th {
+    background-color: var(--burgundy-light) !important;
+    color: var(--pink-accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: none;
+    padding: 0.9rem 1rem;
+}
+
+.table tbody tr {
+    transition: background-color 0.15s ease;
+    background-color: transparent !important;
+}
+
+.table tbody td {
+    padding: 1rem;
+    vertical-align: middle;
+    border-color: var(--border-color);
+    color: var(--text-main);
+    background-color: transparent !important; /* تجعل الخلايا شفافة لتأخذ لون الحاوية Dark Mode */
+}
+
+/* Category Badges */
+.badge-category {
+    padding: 0.4em 0.8em;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 20px;
+}
+.bg-food { background-color: #fce7f0; color: #8b263e; }
+.bg-transport { background-color: #f3e8ff; color: #6b21a8; }
+.bg-bills { background-color: #fee2e2; color: #991b1b; }
+.bg-entertainment { background-color: #fff1f2; color: #be123c; }
+.bg-other { background-color: #f1f5f9; color: #475569; }
+
+/* Buttons & Inputs */
+.btn-burgundy {
+    background-color: var(--burgundy-primary);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    padding: 0.55rem 1.3rem;
+    box-shadow: 0 4px 10px rgba(107, 29, 47, 0.2);
+    transition: all 0.2s ease;
+}
+
+.btn-burgundy:hover {
+    background-color: var(--burgundy-hover);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.form-control, .form-select {
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    padding: 0.6rem 0.9rem;
+    background-color: var(--card-bg);
+    color: var(--text-main);
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: var(--card-bg);
+    color: var(--text-main);
+    border-color: var(--pink-accent);
+    box-shadow: 0 0 0 3px rgba(224, 163, 183, 0.3);
+}
+
+/* Modal Styling */
+.modal-content {
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    color: var(--text-main);
+}
